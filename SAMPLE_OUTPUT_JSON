@@ -1,0 +1,52 @@
+{
+    "GetRouteSummaryForStopResult": {
+        "StopNo": "4442",
+        "StopDescription": "OGILVIE / PALMERSTON",
+        "Error": "",
+        "Routes": {
+            "Route": {
+                "RouteNo": 24,
+                "DirectionID": 0,
+                "Direction": "Eastbound",
+                "RouteHeading": "Beacon Hill",
+                "Trips": {
+                    "Trip": [
+                        {
+                            "TripDestination": "Beacon Hill",
+                            "TripStartTime": "12:03",
+                            "AdjustedScheduleTime": "11",
+                            "AdjustmentAge": "0.40",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4E - DEH",
+                            "Latitude": "45.420504",
+                            "Longitude": "-75.637671",
+                            "GPSSpeed": "0.5"
+                        },
+                        {
+                            "TripDestination": "Beacon Hill",
+                            "TripStartTime": "12:33",
+                            "AdjustedScheduleTime": "41",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4L - DEH",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Beacon Hill",
+                            "TripStartTime": "13:03",
+                            "AdjustedScheduleTime": "71",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4E - DEH",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
