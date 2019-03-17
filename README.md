@@ -1,6 +1,6 @@
 # PiMonth2019-PiOT :rocket:
 
-##Usage
+## Usage
 
 The `oc.py` script can be used to interface with the OC Transpo API.  You give it a stop number, and it will give you either a summary of the upcoming trips for that stop, or just 
 the formatted JSON that the API spits out when you give it a stop number (useful for debugging purposes).
