@@ -5,10 +5,10 @@ import xml.etree.ElementTree as ET
 url = "https://api.octranspo1.com/v1.2/GetNextTripsForStopAllRoutes" #URL to query
 
 #appId = input("Please enter your app ID.")
-appId = "8e242649"
+appId = "PLACE_APP_ID_HERE"
 
 #apiKey = input("Please enter your OC Transpo API key.")
-apiKey = "d6cea23598c577d86e4eb922c500d481"
+apiKey = "PLACE_APP_KEY_HERE"
 
 stopNumber = input("Please type in the stop number.")
 
