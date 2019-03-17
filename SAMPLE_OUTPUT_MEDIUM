@@ -1,0 +1,140 @@
+{
+    "GetRouteSummaryForStopResult": {
+        "StopNo": "6783",
+        "StopDescription": "KING EDWARD / TEMPLETON ( A )",
+        "Error": "",
+        "Routes": {
+            "Route": [
+                {
+                    "RouteNo": 85,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "Lees",
+                    "Trips": [
+                        {
+                            "TripDestination": "Lees",
+                            "TripStartTime": "13:47",
+                            "AdjustedScheduleTime": "10",
+                            "AdjustmentAge": "0.49",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.418512",
+                            "Longitude": "-75.701690",
+                            "GPSSpeed": "25.7"
+                        },
+                        {
+                            "TripDestination": "Lees",
+                            "TripStartTime": "14:02",
+                            "AdjustedScheduleTime": "18",
+                            "AdjustmentAge": "0.41",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.407907",
+                            "Longitude": "-75.713951",
+                            "GPSSpeed": "31.3"
+                        },
+                        {
+                            "TripDestination": "Lees",
+                            "TripStartTime": "14:17",
+                            "AdjustedScheduleTime": "36",
+                            "AdjustmentAge": "0.62",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.375645",
+                            "Longitude": "-75.757949",
+                            "GPSSpeed": "0.5"
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 95,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "Orl\u00e9ans",
+                    "Trips": [
+                        {
+                            "TripDestination": "Place d'Orl\u00e9ans",
+                            "TripStartTime": "13:52",
+                            "AdjustedScheduleTime": "2",
+                            "AdjustmentAge": "3.79",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.418654",
+                            "Longitude": "-75.701356",
+                            "GPSSpeed": "24.6"
+                        },
+                        {
+                            "TripDestination": "Place d'Orl\u00e9ans",
+                            "TripStartTime": "14:29",
+                            "AdjustedScheduleTime": "4",
+                            "AdjustmentAge": "1.47",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.418504",
+                            "Longitude": "-75.701703",
+                            "GPSSpeed": "0.5"
+                        },
+                        {
+                            "TripDestination": "Place d'Orl\u00e9ans",
+                            "TripStartTime": "13:53",
+                            "AdjustedScheduleTime": "12",
+                            "AdjustmentAge": "0.54",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EAB - 60",
+                            "Latitude": "45.408428",
+                            "Longitude": "-75.722950",
+                            "GPSSpeed": "29.1"
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 97,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "Airport / A\u00e9roport"
+                },
+                {
+                    "RouteNo": 98,
+                    "DirectionID": 0,
+                    "Direction": "Southbound",
+                    "RouteHeading": "Hawthorne",
+                    "Trips": [
+                        {
+                            "TripDestination": "Hawthorne",
+                            "TripStartTime": "14:21",
+                            "AdjustedScheduleTime": "4",
+                            "AdjustmentAge": "0.49",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.421187",
+                            "Longitude": "-75.695519",
+                            "GPSSpeed": "38.9"
+                        },
+                        {
+                            "TripDestination": "Hawthorne",
+                            "TripStartTime": "14:41",
+                            "AdjustedScheduleTime": "17",
+                            "AdjustmentAge": "0.61",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.403603",
+                            "Longitude": "-75.736109",
+                            "GPSSpeed": "0.5"
+                        },
+                        {
+                            "TripDestination": "Hawthorne",
+                            "TripStartTime": "15:01",
+                            "AdjustedScheduleTime": "37",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
