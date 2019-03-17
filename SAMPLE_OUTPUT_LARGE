@@ -1,0 +1,737 @@
+{
+    "GetRouteSummaryForStopResult": {
+        "StopNo": "3025",
+        "StopDescription": "ST-LAURENT 3A",
+        "Error": "",
+        "Routes": {
+            "Route": [
+                {
+                    "RouteNo": 7,
+                    "DirectionID": 0,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Carleton",
+                    "Trips": [
+                        {
+                            "TripDestination": "Carleton",
+                            "TripStartTime": "13:00",
+                            "AdjustedScheduleTime": "1",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4L - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Carleton",
+                            "TripStartTime": "13:20",
+                            "AdjustedScheduleTime": "21",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4E - DEH",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Carleton",
+                            "TripStartTime": "13:40",
+                            "AdjustedScheduleTime": "41",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4L - DEH",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 7,
+                    "DirectionID": 1,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "St-Laurent",
+                    "Trips": []
+                },
+                {
+                    "RouteNo": 14,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "St-Laurent",
+                    "Trips": []
+                },
+                {
+                    "RouteNo": 14,
+                    "DirectionID": 1,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Carlington",
+                    "Trips": [
+                        {
+                            "TripDestination": "Carlington",
+                            "TripStartTime": "13:10",
+                            "AdjustedScheduleTime": "11",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Carlington",
+                            "TripStartTime": "13:30",
+                            "AdjustedScheduleTime": "31",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4E - DEH",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Carlington",
+                            "TripStartTime": "13:50",
+                            "AdjustedScheduleTime": "51",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 18,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "St-Laurent",
+                    "Trips": []
+                },
+                {
+                    "RouteNo": 18,
+                    "DirectionID": 1,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Parliament / Parlement",
+                    "Trips": [
+                        {
+                            "TripDestination": "Parliament / Parlement",
+                            "TripStartTime": "13:22",
+                            "AdjustedScheduleTime": "23",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Parliament / Parlement",
+                            "TripStartTime": "13:52",
+                            "AdjustedScheduleTime": "53",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Parliament / Parlement",
+                            "TripStartTime": "14:22",
+                            "AdjustedScheduleTime": "83",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4E - DEH",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 19,
+                    "DirectionID": 0,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Parliament / Parlement",
+                    "Trips": [
+                        {
+                            "TripDestination": "Parliament / Parlement",
+                            "TripStartTime": "13:05",
+                            "AdjustedScheduleTime": "6",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Parliament / Parlement",
+                            "TripStartTime": "13:35",
+                            "AdjustedScheduleTime": "36",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Parliament / Parlement",
+                            "TripStartTime": "14:05",
+                            "AdjustedScheduleTime": "66",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4L - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 19,
+                    "DirectionID": 1,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "St-Laurent",
+                    "Trips": []
+                },
+                {
+                    "RouteNo": 20,
+                    "DirectionID": 0,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Vanier",
+                    "Trips": [
+                        {
+                            "TripDestination": "Loyer",
+                            "TripStartTime": "13:15",
+                            "AdjustedScheduleTime": "16",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4E - DEH",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Loyer",
+                            "TripStartTime": "13:45",
+                            "AdjustedScheduleTime": "46",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4L - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Loyer",
+                            "TripStartTime": "14:15",
+                            "AdjustedScheduleTime": "76",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 20,
+                    "DirectionID": 1,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "St-Laurent",
+                    "Trips": []
+                },
+                {
+                    "RouteNo": 24,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "Beacon Hill",
+                    "Trips": [
+                        {
+                            "TripDestination": "Beacon Hill",
+                            "TripStartTime": "13:03",
+                            "AdjustedScheduleTime": "4",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4E - DEH",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Beacon Hill",
+                            "TripStartTime": "13:33",
+                            "AdjustedScheduleTime": "34",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4L - DEH",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Beacon Hill",
+                            "TripStartTime": "14:03",
+                            "AdjustedScheduleTime": "64",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4E - DEH",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 24,
+                    "DirectionID": 1,
+                    "Direction": "Westbound",
+                    "RouteHeading": "St-Laurent",
+                    "Trips": []
+                },
+                {
+                    "RouteNo": 40,
+                    "DirectionID": 0,
+                    "Direction": "Northbound",
+                    "RouteHeading": "St-Laurent",
+                    "Trips": []
+                },
+                {
+                    "RouteNo": 40,
+                    "DirectionID": 1,
+                    "Direction": "Southbound",
+                    "RouteHeading": "Greenboro",
+                    "Trips": [
+                        {
+                            "TripDestination": "Greenboro",
+                            "TripStartTime": "13:10",
+                            "AdjustedScheduleTime": "11",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4L - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Greenboro",
+                            "TripStartTime": "13:40",
+                            "AdjustedScheduleTime": "41",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Greenboro",
+                            "TripStartTime": "14:10",
+                            "AdjustedScheduleTime": "71",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 61,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "St-Laurent",
+                    "Trips": []
+                },
+                {
+                    "RouteNo": 61,
+                    "DirectionID": 1,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Terry Fox",
+                    "Trips": [
+                        {
+                            "TripDestination": "Stittsville",
+                            "TripStartTime": "13:06",
+                            "AdjustedScheduleTime": "7",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Stittsville",
+                            "TripStartTime": "13:36",
+                            "AdjustedScheduleTime": "37",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EAB - 60",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Stittsville",
+                            "TripStartTime": "14:06",
+                            "AdjustedScheduleTime": "67",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 62,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "St-Laurent",
+                    "Trips": []
+                },
+                {
+                    "RouteNo": 62,
+                    "DirectionID": 1,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Stittsville",
+                    "Trips": [
+                        {
+                            "TripDestination": "Terry Fox",
+                            "TripStartTime": "13:21",
+                            "AdjustedScheduleTime": "22",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Terry Fox",
+                            "TripStartTime": "13:51",
+                            "AdjustedScheduleTime": "52",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Terry Fox",
+                            "TripStartTime": "14:21",
+                            "AdjustedScheduleTime": "82",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 94,
+                    "DirectionID": 0,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Riverview",
+                    "Trips": [
+                        {
+                            "TripDestination": "Tunney's Pasture",
+                            "TripStartTime": "12:35",
+                            "AdjustedScheduleTime": "18",
+                            "AdjustmentAge": "0.49",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.435702",
+                            "Longitude": "-75.554616",
+                            "GPSSpeed": "0.5"
+                        },
+                        {
+                            "TripDestination": "Riverview",
+                            "TripStartTime": "12:50",
+                            "AdjustedScheduleTime": "28",
+                            "AdjustmentAge": "0.32",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6E - 60",
+                            "Latitude": "45.460716",
+                            "Longitude": "-75.488294",
+                            "GPSSpeed": "46.7"
+                        },
+                        {
+                            "TripDestination": "Baseline",
+                            "TripStartTime": "13:05",
+                            "AdjustedScheduleTime": "42",
+                            "AdjustmentAge": "0.59",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.465268",
+                            "Longitude": "-75.448211",
+                            "GPSSpeed": "0.5"
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 94,
+                    "DirectionID": 1,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "Millennium",
+                    "Trips": [
+                        {
+                            "TripDestination": "Millennium",
+                            "TripStartTime": "12:00",
+                            "AdjustedScheduleTime": "1",
+                            "AdjustmentAge": "0.16",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.421370",
+                            "Longitude": "-75.634488",
+                            "GPSSpeed": "12.6"
+                        },
+                        {
+                            "TripDestination": "Millennium",
+                            "TripStartTime": "12:15",
+                            "AdjustedScheduleTime": "27",
+                            "AdjustmentAge": "0.56",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6LB - 60",
+                            "Latitude": "45.404701",
+                            "Longitude": "-75.732071",
+                            "GPSSpeed": "30.2"
+                        },
+                        {
+                            "TripDestination": "Millennium",
+                            "TripStartTime": "12:30",
+                            "AdjustedScheduleTime": "39",
+                            "AdjustmentAge": "0.22",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.353243",
+                            "Longitude": "-75.767163",
+                            "GPSSpeed": "77.5"
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 95,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "Orl\u00e9ans",
+                    "Trips": [
+                        {
+                            "TripDestination": "Place d'Orl\u00e9ans",
+                            "TripStartTime": "11:53",
+                            "AdjustedScheduleTime": "8",
+                            "AdjustmentAge": "0.38",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.418542",
+                            "Longitude": "-75.670475",
+                            "GPSSpeed": "43.4"
+                        },
+                        {
+                            "TripDestination": "Place d'Orl\u00e9ans",
+                            "TripStartTime": "12:30",
+                            "AdjustedScheduleTime": "9",
+                            "AdjustmentAge": "0.09",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6E - 60",
+                            "Latitude": "45.418385",
+                            "Longitude": "-75.669876",
+                            "GPSSpeed": "5.0"
+                        },
+                        {
+                            "TripDestination": "Place d'Orl\u00e9ans",
+                            "TripStartTime": "12:22",
+                            "AdjustedScheduleTime": "22",
+                            "AdjustmentAge": "0.09",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.408375",
+                            "Longitude": "-75.723104",
+                            "GPSSpeed": "21.3"
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 95,
+                    "DirectionID": 1,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Barrhaven Centre",
+                    "Trips": [
+                        {
+                            "TripDestination": "Cambrian",
+                            "TripStartTime": "12:41",
+                            "AdjustedScheduleTime": "4",
+                            "AdjustmentAge": "0.66",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.426573",
+                            "Longitude": "-75.615892",
+                            "GPSSpeed": "94.0"
+                        },
+                        {
+                            "TripDestination": "Barrhaven Centre",
+                            "TripStartTime": "12:54",
+                            "AdjustedScheduleTime": "17",
+                            "AdjustmentAge": "0.43",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.479378",
+                            "Longitude": "-75.520168",
+                            "GPSSpeed": "44.5"
+                        },
+                        {
+                            "TripDestination": "Tunney's Pasture",
+                            "TripStartTime": "13:01",
+                            "AdjustedScheduleTime": "22",
+                            "AdjustmentAge": "0.46",
+                            "LastTripOfSchedule": false,
+                            "BusType": "6EB - 60",
+                            "Latitude": "45.478545",
+                            "Longitude": "-75.518494",
+                            "GPSSpeed": "0.5"
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 104,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "Place d'Orl\u00e9ans",
+                    "Trips": [
+                        {
+                            "TripDestination": "Place d'Orl\u00e9ans",
+                            "TripStartTime": "12:38",
+                            "AdjustedScheduleTime": "1",
+                            "AdjustmentAge": "0.31",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "45.421397",
+                            "Longitude": "-75.634488",
+                            "GPSSpeed": "9.4"
+                        },
+                        {
+                            "TripDestination": "Place d'Orl\u00e9ans",
+                            "TripStartTime": "13:08",
+                            "AdjustedScheduleTime": "33",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4L - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Place d'Orl\u00e9ans",
+                            "TripStartTime": "13:38",
+                            "AdjustedScheduleTime": "63",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4L - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 104,
+                    "DirectionID": 1,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Carleton",
+                    "Trips": [
+                        {
+                            "TripDestination": "Carleton",
+                            "TripStartTime": "13:01",
+                            "AdjustedScheduleTime": "22",
+                            "AdjustmentAge": "0.49",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LA - IN",
+                            "Latitude": "45.478545",
+                            "Longitude": "-75.518494",
+                            "GPSSpeed": "0.5"
+                        },
+                        {
+                            "TripDestination": "Carleton",
+                            "TripStartTime": "13:31",
+                            "AdjustedScheduleTime": "52",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Carleton",
+                            "TripStartTime": "14:01",
+                            "AdjustedScheduleTime": "82",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4L - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                },
+                {
+                    "RouteNo": 106,
+                    "DirectionID": 0,
+                    "Direction": "Eastbound",
+                    "RouteHeading": "St-Laurent",
+                    "Trips": []
+                },
+                {
+                    "RouteNo": 106,
+                    "DirectionID": 1,
+                    "Direction": "Westbound",
+                    "RouteHeading": "Riverside",
+                    "Trips": [
+                        {
+                            "TripDestination": "Riverside Station",
+                            "TripStartTime": "13:22",
+                            "AdjustedScheduleTime": "23",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LAB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Riverside Station",
+                            "TripStartTime": "13:52",
+                            "AdjustedScheduleTime": "53",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        },
+                        {
+                            "TripDestination": "Riverside Station",
+                            "TripStartTime": "14:22",
+                            "AdjustedScheduleTime": "83",
+                            "AdjustmentAge": "-1",
+                            "LastTripOfSchedule": false,
+                            "BusType": "4LAB - IN",
+                            "Latitude": "",
+                            "Longitude": "",
+                            "GPSSpeed": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
