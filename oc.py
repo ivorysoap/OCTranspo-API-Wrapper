@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 import json
 import sys
 
+
 def getNumRoutes(trips):
     # Test: is "Route" a list or a dict?  If dict, stop serviced by one route.  If list, stop serviced by multiple
     # routes.
@@ -12,14 +13,62 @@ def getNumRoutes(trips):
     else:
         return 1
 
+
 def printUsage():
     print(
         "\nUsage: python oc.py (app_id) (api_key) [-json]\n\n where -json will cause the program to spit out the raw "
         "JSON data from the API.  Omitting it gives you the regular interface.")
 
-def printResponseHeader(jsonData):
+
+def printHeader(jsonData):
     print("\nUpcoming trips for stop #" + str(jsonData['GetRouteSummaryForStopResult']["StopNo"]) + " (" + str(
         jsonData['GetRouteSummaryForStopResult']["StopDescription"]) + "): \n\n")
+
+
+def printRouteHeader(trips):
+    print("\tRoute " + str(trips["RouteNo"]) + " " + str(
+        trips["RouteHeading"]) + ":\n\n")
+
+
+def printTrips(trips, numRoutes):
+    if numRoutes == 1:
+
+        printRouteHeader(trips)
+
+        numTrips = len(trips["Trips"]["Trip"])
+
+        for i in range(0, numTrips):
+            print("\t\tto " + str(trips["Trips"]["Trip"][i]["TripDestination"]) + " - at " + str(
+                trips["Trips"]["Trip"][i]["TripStartTime"]))
+            print("\n")
+
+        if numTrips == 0:
+            print("\t\tNothing right now.\n\n")
+
+    elif numRoutes > 1:
+
+        # print("Multiple routes\n")
+
+        for i in range(0, numRoutes):
+
+            if 'Trips' in trips[i]:
+                numTrips = len(trips[i]["Trips"])
+            else:
+                numTrips = 0
+
+            print(
+                "\tRoute " + str(trips[i]["RouteNo"]) + " " + str(
+                    trips[i]["RouteHeading"]) + ":\n\n")
+
+            for j in range(0, numTrips):
+                print("\t\tto " + str(trips[i]["Trips"][j][
+                                          "TripDestination"]) + " - at " + str(
+                    trips[i]["Trips"][j]["TripStartTime"]))
+                print("\n")
+
+            if numTrips == 0:
+                print("\t\tNothing right now.\n\n")
+
 
 def formatData(jsonData):
     """
@@ -38,49 +87,11 @@ def tripsToString(jsonData):
 
     trips = jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"]
 
-    printResponseHeader(jsonData)
-
     numRoutes = getNumRoutes(trips)
 
-    if (numRoutes == 1):
+    printHeader(jsonData)
 
-        numTrips = len(jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"]["Trips"]["Trip"])
-
-        print("\tRoute " + str(jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"]["RouteNo"]) + " " + str(
-            jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"]["RouteHeading"]) + ":\n\n")
-
-        for i in range(0, numTrips):
-            print("\t\tto " + str(jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"]["Trips"]["Trip"][i][
-                                      "TripDestination"]) + " - at " + str(
-                jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"]["Trips"]["Trip"][i]["TripStartTime"]))
-            print("\n")
-
-        if (numTrips == 0):
-            print("\t\tNothing right now.\n\n")
-
-    elif (numRoutes > 1):
-
-        # print("Multiple routes\n")
-
-        for i in range(0, numRoutes):
-
-            if 'Trips' in jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"][i]:
-                numTrips = len(jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"][i]["Trips"])
-            else:
-                numTrips = 0
-
-            print(
-                "\tRoute " + str(jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"][i]["RouteNo"]) + " " + str(
-                    jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"][i]["RouteHeading"]) + ":\n\n")
-
-            for j in range(0, numTrips):
-                print("\t\tto " + str(jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"][i]["Trips"][j][
-                                          "TripDestination"]) + " - at " + str(
-                    jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"][i]["Trips"][j]["TripStartTime"]))
-                print("\n")
-
-            if (numTrips == 0):
-                print("\t\tNothing right now.\n\n")
+    printTrips(trips, numRoutes)
 
 
 if (len(sys.argv) != 3) and len(sys.argv) != 4:
