@@ -6,7 +6,7 @@ the formatted JSON that the API spits out when you give it a stop number (useful
 
 ## Usage
 
-`$ python oc.py (app_id) (api_key) [-json]`
+`$ python3 oc.py (app_id) (api_key) [-json]`
 
 where:
 
