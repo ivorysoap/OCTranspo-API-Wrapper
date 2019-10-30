@@ -83,29 +83,29 @@ def printTrips(trips, numRoutes):
 
     elif numRoutes > 1:
 
-        # print("Multiple routes\n")
+        numTrips = []
 
         for i in range(0, numRoutes):
 
             if 'Trips' in trips[i] and isinstance(trips[i]["Trips"], list):
-                numTrips = len(trips[i]["Trips"])
+                numTrips.append(len(trips[i]["Trips"]))
             elif 'Trips' in trips[i] and isinstance(trips[i]["Trips"], dict):
-                numTrips = 1
+                numTrips.append(1)
             else:
-                numTrips = 0
+                numTrips.append(0)
 
             print("\tRoute " + str(trips[i]["RouteNo"]) + " " + str(trips[i]["RouteHeading"]) + ":\n\n")
 
-            if numTrips > 1:
-                for j in range(0, numTrips):
+            if numTrips[i] > 1:
+                for j in range(0, numTrips[i]):
                     print("\t\tto " + str(trips[i]["Trips"][j]["TripDestination"]) + " - at " + str(
                         trips[i]["Trips"][j]["TripStartTime"]))
                     print("\n")
-            elif numTrips == 1:
+            elif numTrips[i] == 1:
                 print("\t\tto " + str(trips[i]["Trips"]["TripDestination"]) + " - at " + str(
                     trips[i]["Trips"]["TripStartTime"]))
                 print("\n")
-            elif numTrips == 0:
+            elif numTrips[i] == 0:
                 print("\t\tNothing right now.\n\n")
 
 
