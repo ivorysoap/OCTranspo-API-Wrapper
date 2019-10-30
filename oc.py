@@ -10,6 +10,8 @@ def main():
     while True:
 
         stopNumber = input("Please type in the stop number.")
+        if stopNumber.lower() == "exit":
+            exit(1)
 
         vals = {'appID': args.app_id,
                 'apiKey': args.api_key,
