@@ -76,6 +76,8 @@ def printTrips(trips, numRoutes):
         for i in range(0, numTrips):
             print("\t\tto " + str(trips["Trips"]["Trip"][i]["TripDestination"]) + " - at " + str(
                 trips["Trips"]["Trip"][i]["TripStartTime"]))
+            if trips["Trips"]["Trip"][i]["LastTripOfSchedule"]:
+                print("\t\t(Last Trip)")
             print("\n")
 
         if numTrips == 0:
@@ -100,10 +102,14 @@ def printTrips(trips, numRoutes):
                 for j in range(0, numTrips[i]):
                     print("\t\tto " + str(trips[i]["Trips"][j]["TripDestination"]) + " - at " + str(
                         trips[i]["Trips"][j]["TripStartTime"]))
+                    if trips[i]["Trips"][j]["LastTripOfSchedule"]:
+                        print("\t\t(Last Trip)")
                     print("\n")
             elif numTrips[i] == 1:
                 print("\t\tto " + str(trips[i]["Trips"]["TripDestination"]) + " - at " + str(
                     trips[i]["Trips"]["TripStartTime"]))
+                if trips[i]["Trips"]["LastTripOfSchedule"]:
+                    print("\t\t(Last Trip)")
                 print("\n")
             elif numTrips[i] == 0:
                 print("\t\tNothing right now.\n\n")
