@@ -3,7 +3,6 @@ import urllib.parse
 import argparse
 import xml.etree.ElementTree as ET
 import json
-import sys
 
 
 def parseArgs():
@@ -24,14 +23,6 @@ def getNumRoutes(trips):
         return len(trips)
     else:
         return 1
-
-
-@DeprecationWarning
-def printUsage():
-    print(
-        "\nUsage: python oc.py (app_id) (api_key) [-json]\n\n where -json will cause the program to spit out the raw "
-        "JSON data from the API.  Omitting it gives you the regular interface.")
-
 
 def printHeader(jsonData):
     print("\nUpcoming trips for stop #" + str(jsonData['GetRouteSummaryForStopResult']["StopNo"]) + " (" + str(jsonData['GetRouteSummaryForStopResult']["StopDescription"]) + "): \n\n")
@@ -104,17 +95,6 @@ def tripsToString(jsonData):
     printHeader(jsonData)
 
     printTrips(trips, numRoutes)
-
-
-# if (len(sys.argv) != 3) and len(sys.argv) != 4:
-#     printUsage()
-#     sys.exit(-1)
-#
-# # appId = input("Please enter your app ID.")
-# appId = sys.argv[1]
-#
-# # apiKey = input("Please enter your OC Transpo API key.")
-# apiKey = sys.argv[2]
 
 ap, args = parseArgs()
 
