@@ -6,9 +6,7 @@ import json
 
 def main():
     ap, args = parseArgs()
-
     url = "https://api.octranspo1.com/v1.2/GetNextTripsForStopAllRoutes"  # URL to query
-
     while True:
 
         stopNumber = input("Please type in the stop number.")
