@@ -1,8 +1,50 @@
 import urllib.request
 import urllib.parse
+import argparse
 import xml.etree.ElementTree as ET
 import json
-import sys
+
+
+def main():
+    ap, args = parseArgs()
+
+    url = "https://api.octranspo1.com/v1.2/GetNextTripsForStopAllRoutes"  # URL to query
+
+    while True:
+
+        stopNumber = input("Please type in the stop number.")
+
+        vals = {'appID': args.app_id,
+                'apiKey': args.api_key,
+                'stopNo': stopNumber,
+                'format': 'json'}  # Parameters to pass to URL
+
+        data = urllib.parse.urlencode(vals)  # Some parsing and encoding magic
+
+        data = data.encode('ascii')
+
+        req = urllib.request.Request(url, data)
+
+        with urllib.request.urlopen(req) as response:
+            rawData = json.loads(response.read())
+
+        cleanData = formatData(rawData)
+
+        if not args.print_json:
+            tripsToString(rawData)
+        else:
+            print(formatData(rawData))
+
+
+def parseArgs():
+    """Parses and generates command-line arguments."""
+    ap = argparse.ArgumentParser()
+    ap.add_argument("app_id", help="OC Transpo App ID")
+    ap.add_argument("api_key", help="OC Transpo API Key")
+    ap.add_argument("-json", "--print-json", action='store_true',
+                    help="Causes the program to spit out the raw JSON data from the OC Transpo API")
+    args = ap.parse_args()
+    return ap, args
 
 
 def getNumRoutes(trips):
@@ -12,12 +54,6 @@ def getNumRoutes(trips):
         return len(trips)
     else:
         return 1
-
-
-def printUsage():
-    print(
-        "\nUsage: python oc.py (app_id) (api_key) [-json]\n\n where -json will cause the program to spit out the raw "
-        "JSON data from the API.  Omitting it gives you the regular interface.")
 
 
 def printHeader(jsonData):
@@ -51,22 +87,25 @@ def printTrips(trips, numRoutes):
 
         for i in range(0, numRoutes):
 
-            if 'Trips' in trips[i]:
+            if 'Trips' in trips[i] and isinstance(trips[i]["Trips"], list):
                 numTrips = len(trips[i]["Trips"])
+            elif 'Trips' in trips[i] and isinstance(trips[i]["Trips"], dict):
+                numTrips = 1
             else:
                 numTrips = 0
 
-            print(
-                "\tRoute " + str(trips[i]["RouteNo"]) + " " + str(
-                    trips[i]["RouteHeading"]) + ":\n\n")
+            print("\tRoute " + str(trips[i]["RouteNo"]) + " " + str(trips[i]["RouteHeading"]) + ":\n\n")
 
-            for j in range(0, numTrips):
-                print("\t\tto " + str(trips[i]["Trips"][j][
-                                          "TripDestination"]) + " - at " + str(
-                    trips[i]["Trips"][j]["TripStartTime"]))
+            if numTrips > 1:
+                for j in range(0, numTrips):
+                    print("\t\tto " + str(trips[i]["Trips"][j]["TripDestination"]) + " - at " + str(
+                        trips[i]["Trips"][j]["TripStartTime"]))
+                    print("\n")
+            elif numTrips == 1:
+                print("\t\tto " + str(trips[i]["Trips"]["TripDestination"]) + " - at " + str(
+                    trips[i]["Trips"]["TripStartTime"]))
                 print("\n")
-
-            if numTrips == 0:
+            elif numTrips == 0:
                 print("\t\tNothing right now.\n\n")
 
 
@@ -94,41 +133,7 @@ def tripsToString(jsonData):
     printTrips(trips, numRoutes)
 
 
-if (len(sys.argv) != 3) and len(sys.argv) != 4:
-    printUsage()
-    sys.exit(-1)
-
-url = "https://api.octranspo1.com/v1.2/GetNextTripsForStopAllRoutes"  # URL to query
-
-# appId = input("Please enter your app ID.")
-appId = sys.argv[1]
-
-# apiKey = input("Please enter your OC Transpo API key.")
-apiKey = sys.argv[2]
-
-while True:
-
-    stopNumber = input("Please type in the stop number.")
-
-    vals = {'appID': appId,
-            'apiKey': apiKey,
-            'stopNo': stopNumber,
-            'format': 'json'}  # Parameters to pass to URL
-
-    data = urllib.parse.urlencode(vals)  # Some parsing and encoding magic
-
-    data = data.encode('ascii')
-
-    req = urllib.request.Request(url, data)
-
-    with urllib.request.urlopen(req) as response:
-        rawData = json.loads(response.read())
-
-    cleanData = formatData(rawData)
-
-    if (len(sys.argv) == 3):
-        tripsToString(rawData)
-    elif (len(sys.argv) == 4 and sys.argv[3] == '-json'):
-        print(formatData(rawData))
+if __name__ == "__main__":
+    main()
 
 # Message Ivor for app ID and API key
