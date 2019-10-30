@@ -11,7 +11,7 @@ def main():
 
         stopNumber = input("Please type in the stop number.")
         if stopNumber.lower() == "exit":
-            exit(1)
+            exit(0)
 
         vals = {'appID': args.app_id,
                 'apiKey': args.api_key,
