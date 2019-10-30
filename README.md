@@ -1,4 +1,4 @@
-# PiMonth2019-PiOT :rocket:
+# OC Transpo API Wrapper :busstop: :oncoming_bus:
 
 
 The `oc.py` script can be used to interface with the OC Transpo API.  You give it a stop number, and it will give you either a summary of the upcoming trips for that stop, or just 
@@ -17,3 +17,4 @@ where:
 ## Dependencies
 
 * Python 3.7
+* OC Transpo API credentials (you'll need to get these yourself)
