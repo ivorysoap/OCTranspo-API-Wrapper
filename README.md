@@ -1,5 +1,6 @@
 # OC Transpo API Wrapper :busstop: :oncoming_bus:
 
+[![Build Status](https://travis-ci.com/ivorysoap/PiMonth2019-PiOT.svg?branch=master)](https://travis-ci.com/ivorysoap/PiMonth2019-PiOT)
 
 The `oc.py` script can be used to interface with the OC Transpo API.  You give it a stop number, and it will give you either a summary of the upcoming trips for that stop, or just 
 the formatted JSON that the API spits out when you give it a stop number (useful for debugging purposes).
