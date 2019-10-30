@@ -5,6 +5,37 @@ import xml.etree.ElementTree as ET
 import json
 
 
+def main():
+    ap, args = parseArgs()
+
+    url = "https://api.octranspo1.com/v1.2/GetNextTripsForStopAllRoutes"  # URL to query
+
+    while True:
+
+        stopNumber = input("Please type in the stop number.")
+
+        vals = {'appID': args.app_id,
+                'apiKey': args.api_key,
+                'stopNo': stopNumber,
+                'format': 'json'}  # Parameters to pass to URL
+
+        data = urllib.parse.urlencode(vals)  # Some parsing and encoding magic
+
+        data = data.encode('ascii')
+
+        req = urllib.request.Request(url, data)
+
+        with urllib.request.urlopen(req) as response:
+            rawData = json.loads(response.read())
+
+        cleanData = formatData(rawData)
+
+        if not args.print_json:
+            tripsToString(rawData)
+        else:
+            print(formatData(rawData))
+
+
 def parseArgs():
     """Parses and generates command-line arguments."""
     ap = argparse.ArgumentParser()
@@ -24,8 +55,10 @@ def getNumRoutes(trips):
     else:
         return 1
 
+
 def printHeader(jsonData):
-    print("\nUpcoming trips for stop #" + str(jsonData['GetRouteSummaryForStopResult']["StopNo"]) + " (" + str(jsonData['GetRouteSummaryForStopResult']["StopDescription"]) + "): \n\n")
+    print("\nUpcoming trips for stop #" + str(jsonData['GetRouteSummaryForStopResult']["StopNo"]) + " (" + str(
+        jsonData['GetRouteSummaryForStopResult']["StopDescription"]) + "): \n\n")
 
 
 def printRouteHeader(trips):
@@ -41,7 +74,8 @@ def printTrips(trips, numRoutes):
         numTrips = len(trips["Trips"]["Trip"])
 
         for i in range(0, numTrips):
-            print("\t\tto " + str(trips["Trips"]["Trip"][i]["TripDestination"]) + " - at " + str(trips["Trips"]["Trip"][i]["TripStartTime"]))
+            print("\t\tto " + str(trips["Trips"]["Trip"][i]["TripDestination"]) + " - at " + str(
+                trips["Trips"]["Trip"][i]["TripStartTime"]))
             print("\n")
 
         if numTrips == 0:
@@ -64,10 +98,12 @@ def printTrips(trips, numRoutes):
 
             if numTrips > 1:
                 for j in range(0, numTrips):
-                    print("\t\tto " + str(trips[i]["Trips"][j]["TripDestination"]) + " - at " + str(trips[i]["Trips"][j]["TripStartTime"]))
+                    print("\t\tto " + str(trips[i]["Trips"][j]["TripDestination"]) + " - at " + str(
+                        trips[i]["Trips"][j]["TripStartTime"]))
                     print("\n")
             elif numTrips == 1:
-                print("\t\tto " + str(trips[i]["Trips"]["TripDestination"]) + " - at " + str(trips[i]["Trips"]["TripStartTime"]))
+                print("\t\tto " + str(trips[i]["Trips"]["TripDestination"]) + " - at " + str(
+                    trips[i]["Trips"]["TripStartTime"]))
                 print("\n")
             elif numTrips == 0:
                 print("\t\tNothing right now.\n\n")
@@ -96,33 +132,8 @@ def tripsToString(jsonData):
 
     printTrips(trips, numRoutes)
 
-ap, args = parseArgs()
 
-url = "https://api.octranspo1.com/v1.2/GetNextTripsForStopAllRoutes"  # URL to query
-
-while True:
-
-    stopNumber = input("Please type in the stop number.")
-
-    vals = {'appID': args.app_id,
-            'apiKey': args.api_key,
-            'stopNo': stopNumber,
-            'format': 'json'}  # Parameters to pass to URL
-
-    data = urllib.parse.urlencode(vals)  # Some parsing and encoding magic
-
-    data = data.encode('ascii')
-
-    req = urllib.request.Request(url, data)
-
-    with urllib.request.urlopen(req) as response:
-        rawData = json.loads(response.read())
-
-    cleanData = formatData(rawData)
-
-    if not args.print_json:
-        tripsToString(rawData)
-    else:
-        print(formatData(rawData))
+if __name__ == "__main__":
+    main()
 
 # Message Ivor for app ID and API key
