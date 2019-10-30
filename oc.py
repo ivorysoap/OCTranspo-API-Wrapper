@@ -1,7 +1,6 @@
 import urllib.request
 import urllib.parse
 import argparse
-import xml.etree.ElementTree as ET
 import json
 
 
