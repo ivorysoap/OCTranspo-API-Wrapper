@@ -2,6 +2,6 @@ language: python
 python:
   - "3.7"
 script:
-  - python oc.py $APP_ID $API_KEY
+  - python oc.py $APP_ID $API_KEY < stops.txt
 env:
   - secure: "QmjYVnB2W2GO+x2CVWZUKUOWRYUrctqIv6Er3DkvldGzpPBGAQhqi32/sPbacYM3+nz0f00zbp7jl0XmLD+n8R6F/gH72aJxAlXiM9JpXD6oUqNYLwjQtJ1A8hxjrIi4IfuYBTPuoL3G91wraZAag9Eq8xqZ4Wz/yGyCNgvdVNIiWPGe2gsSjWSI6pf/JgoN/NOywx7vcRu9wh2E4hTW42AuSstucwujns+vClJtNi8UTNlh2v5za3sXe9QwUNuM21bUk81UnI553X+2AE3KUCJhPcpAlwkP8DYWiki49qe2HxQDBftfRgcnGDxIPUFbKqhbGWG1QVLA5+3tXKc8BjWJcfbRw+IhagwUvPOZZLy/Ovz0NMHVxIlK8asHHFYSqm0wA/+UL8X+qgSC/TWqEs5gsRYbDL9kOWTt1XgWVrE+4NSjP3OO996+OlBkYdTjEcLBBgXmRnnR0XJI4dKo5nmiGc8irAnc/Vl1f/5QJpsazZj/QMHZSw8YqE1ydVzaawisnq2FO7kCAAUTfsMYvBAvPunYEkE6+EFuDwB1najldno8WjvM86kOkAp3vrGtDX0m7zf+6E+yig4j1CWHdOPww4Xl0tQTXF7QAfhvSIekLc7cW2fyC0gEiOeWu897VL2BHxFj+Ny47k+HRCOLP14eVpuLIV13HcuVeuRGiXM="
