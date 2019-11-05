@@ -9,7 +9,7 @@ def main():
     url = "https://api.octranspo1.com/v1.2/GetNextTripsForStopAllRoutes"  # URL to query
     while True:
 
-        stopNumber = input("Please type in the stop number.")
+        stopNumber = input("Please type in the stop number, or \"Exit\" to exit.")
         if stopNumber.lower() == "exit":
             exit(0)
 
@@ -95,7 +95,7 @@ def printTrips(trips, numRoutes):
             else:
                 numTrips.append(0)
 
-            print("\tRoute " + str(trips[i]["RouteNo"]) + " " + str(trips[i]["RouteHeading"]) + ":\n\n")
+            print("\n\n\tRoute " + str(trips[i]["RouteNo"]) + " " + str(trips[i]["RouteHeading"]) + ":\n")
 
             if numTrips[i] > 1:
                 for j in range(0, numTrips[i]):
@@ -103,15 +103,14 @@ def printTrips(trips, numRoutes):
                         trips[i]["Trips"][j]["TripStartTime"]))
                     if trips[i]["Trips"][j]["LastTripOfSchedule"]:
                         print("\t\t(Last Trip)")
-                    print("\n")
+                print("\n")
             elif numTrips[i] == 1:
                 print("\t\tto " + str(trips[i]["Trips"]["TripDestination"]) + " - at " + str(
                     trips[i]["Trips"]["TripStartTime"]))
                 if trips[i]["Trips"]["LastTripOfSchedule"]:
                     print("\t\t(Last Trip)")
-                print("\n")
             elif numTrips[i] == 0:
-                print("\t\tNothing right now.\n\n")
+                print("\t\tNothing right now.\n")
 
 
 def formatData(jsonData):
@@ -129,13 +128,29 @@ def tripsToString(jsonData):
     Takes JSON object and from it, prints upcoming trips.
     """
 
-    trips = jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"]
+    if jsonData is not None:  # API can sometimes return a None object if given nonsensical input
 
-    numRoutes = getNumRoutes(trips)
+        if "Routes" in jsonData['GetRouteSummaryForStopResult']:
+            # API only includes a Routes object inside the GetRouteSummaryForStopResult object if stop number is valid
 
-    printHeader(jsonData)
+            trips = jsonData['GetRouteSummaryForStopResult']["Routes"]["Route"]
 
-    printTrips(trips, numRoutes)
+            numRoutes = getNumRoutes(trips)
+
+            printHeader(jsonData)
+
+            printTrips(trips, numRoutes)
+
+        elif "Error" in jsonData['GetRouteSummaryForStopResult']:
+
+            errorNo = int(jsonData['GetRouteSummaryForStopResult']["Error"])
+            print("\nAPI returned error " + str(errorNo) + ".")
+
+            if errorNo == 10:
+                print("Likely cause: stop number not found.\n")
+
+    else:
+        print("Unspecified error.")
 
 
 if __name__ == "__main__":
