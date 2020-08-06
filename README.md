@@ -4,14 +4,14 @@
 
 Instead of messing around with oddly-formed GET requests, why not just call the API from your terminal and get real-time transit data at your fingertips - for any bus stop in Ottawa?
 
+:warning: **Under construction** — Around the time the Confederation Line was opened, OC Transpo updated their API and I'm still working to adapt to the changes.
+
 ## Overview
 
 This is a wrapper for the OC Transpo API that provides the user more readability and ease of use than interfacing with the API directly.  
 
 The `oc.py` script can be used to interface with the OC Transpo API.  You give it a stop number, and it will give you either a summary of the upcoming trips for that stop, or just 
 the formatted JSON that the API spits out when you give it a stop number (useful for debugging purposes).
-
-*Under construction*
 
 ## Usage
 
