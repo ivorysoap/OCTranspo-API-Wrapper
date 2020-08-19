@@ -8,7 +8,9 @@ Instead of messing around with oddly-formed GET requests, why not just call the 
 
 ## Overview
 
-This is a wrapper for the OC Transpo API that provides the user more readability and ease of use than interfacing with the API directly.  
+This is a wrapper for the OC Transpo API with some built-in features.
+
+Originally, the goal ofthis project was to make a wrapper that  provides the user more readability and ease of use than interfacing with the API directly.  However, since the API's been updated, I'm working on some new goals, like creating a Bash command to make the API accessible from a terminal.
 
 The `oc.py` script can be used to interface with the OC Transpo API.  You give it a stop number, and it will give you either a summary of the upcoming trips for that stop, or just 
 the formatted JSON that the API spits out when you give it a stop number (useful for debugging purposes).
