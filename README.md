@@ -2,9 +2,7 @@
 
 [![Build Status](https://travis-ci.com/ivorysoap/PiMonth2019-PiOT.svg?branch=master)](https://travis-ci.com/ivorysoap/PiMonth2019-PiOT)
 
-Instead of messing around with oddly-formed GET requests, why not just call the API from your terminal and get real-time transit data at your fingertips - for any bus stop in Ottawa?
-
-:warning: **Under construction** — Around the time the Confederation Line was opened, OC Transpo updated their API and I'm still working to adapt to the changes.
+:warning: **Under construction** — Much like the O-Train Confederation Line, this project is a constant work in progress.
 
 ## Overview
 
