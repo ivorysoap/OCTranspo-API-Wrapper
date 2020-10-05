@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.com/ivorysoap/PiMonth2019-PiOT.svg?branch=master)](https://travis-ci.com/ivorysoap/PiMonth2019-PiOT)
 
-:warning: **Under construction** — Much like the O-Train Confederation Line, this project is a constant work in progress.
+:warning: **Under construction** — Much like the O-Train Confederation 
+Line itself, this is a constant work in progress and there's no saying 
+for sure when it'll be done.
 
 ## Overview
 
@@ -26,5 +28,8 @@ where:
 
 ## Dependencies
 
-* Python 3.7
+You should be able to run `oc.py` by itself as long as you have the 
+following
+
+* Python 3.7 and packages imported by `oc.py`
 * OC Transpo API credentials (you'll need to get these yourself)
